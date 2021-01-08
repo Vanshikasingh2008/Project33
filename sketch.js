@@ -90,7 +90,7 @@ function draw() {
    }
 
    if(gamestate === "play"){
-   mousePressed();
+   //mousePressed();
 
    if(particles !== null){
     particles.display();
