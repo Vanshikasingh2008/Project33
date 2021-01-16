@@ -92,34 +92,34 @@ function draw() {
    if(gamestate === "play"){
    //mousePressed();
 
-   if(particles !== null){
+   if(particles != null){
     particles.display();
      if(particles.body.position.y > 760){
        if(particles.body.position.x < 300){
          score = score+500;
-        // particles = null;
+         particles = null;
          if(turn >= 5) gamestate = "end";
        }
      }
    }
 
-   if(particles !== null){
+   if(particles != null){
     particles.display();
     if(particles.body.position.y > 760){
-      if(particles.body.position.x > 301 && particles.body.position.y < 600){
+      if(particles.body.position.x > 301 && particles.body.position.x < 600){
         score = score+100;
-        //particles = null;
+        particles = null;
         if(turn >= 5) gamestate = "end";
       }
     }
   }
 
-  if(particles !== null){
+  if(particles != null){
     particles.display();
     if(particles.body.position.y > 760){
-      if(particles.body.position.x > 601 && particles.body.position.y < 900){
+      if(particles.body.position.x > 601 && particles.body.position.x < 900){
         score = score+500;
-        //particles = null;
+        particles = null;
         if(turn >= 5) gamestate = "end";
       }
     }
@@ -127,13 +127,13 @@ function draw() {
    }
 
   if(gamestate === "end"){
-    textSize(50);
-    text("GameOver",400,400);
+    textSize(80);
+    text("GameOver",200,250);
   }
 }
 
 function mousePressed(){
-  if(gamestate !== "end"){
+  if(gamestate != "end"){
     turn++;
     particles = new Particle(mouseX,10,10,10);
   }
